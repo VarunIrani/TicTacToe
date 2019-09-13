@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D36D4085232743AA00F9FDEE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D36D4084232743AA00F9FDEE /* main.cpp */; };
+		D36D40A823277BB600F9FDEE /* StateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D36D40A623277BB600F9FDEE /* StateMachine.cpp */; };
+		D37A12D12327FA0E00C84EC2 /* GameOverState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D37A12CF2327FA0E00C84EC2 /* GameOverState.cpp */; };
+		D37A12D3232809B600C84EC2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D37A12D2232809B600C84EC2 /* Images.xcassets */; };
+		D37A12D72328C4BA00C84EC2 /* Draw Grid.png in Resources */ = {isa = PBXBuildFile; fileRef = D37A12D62328C4BA00C84EC2 /* Draw Grid.png */; };
+		D39FAB722328F75C00ED4E2D /* AI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D39FAB702328F75C00ED4E2D /* AI.cpp */; };
+		D3DB99132327828900DA1667 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB99112327828900DA1667 /* AssetManager.cpp */; };
+		D3DB991623278E9B00DA1667 /* InputManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB991423278E9B00DA1667 /* InputManager.cpp */; };
+		D3DB99192327916700DA1667 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB99172327916700DA1667 /* Game.cpp */; };
+		D3DB99332327B03100DA1667 /* Home Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB991C2327B03100DA1667 /* Home Button.png */; };
+		D3DB99342327B03100DA1667 /* Achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB991D2327B03100DA1667 /* Achievements.png */; };
+		D3DB99352327B03100DA1667 /* O Win.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB991E2327B03100DA1667 /* O Win.png */; };
+		D3DB99362327B03100DA1667 /* O.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB991F2327B03100DA1667 /* O.png */; };
+		D3DB99372327B03100DA1667 /* X.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99202327B03100DA1667 /* X.png */; };
+		D3DB99382327B03100DA1667 /* X Win.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99212327B03100DA1667 /* X Win.png */; };
+		D3DB99392327B03100DA1667 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99222327B03100DA1667 /* .gitkeep */; };
+		D3DB993A2327B03100DA1667 /* Play Button Outer.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99232327B03100DA1667 /* Play Button Outer.png */; };
+		D3DB993B2327B03100DA1667 /* Retry Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99242327B03100DA1667 /* Retry Button.png */; };
+		D3DB993C2327B03100DA1667 /* Main Menu Background.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99252327B03100DA1667 /* Main Menu Background.png */; };
+		D3DB993D2327B03100DA1667 /* Grid.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99262327B03100DA1667 /* Grid.png */; };
+		D3DB993E2327B03100DA1667 /* Sound Off.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99272327B03100DA1667 /* Sound Off.png */; };
+		D3DB993F2327B03100DA1667 /* Pause Window.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99282327B03100DA1667 /* Pause Window.png */; };
+		D3DB99402327B03100DA1667 /* Game Title.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99292327B03100DA1667 /* Game Title.png */; };
+		D3DB99412327B03100DA1667 /* Splash Background.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992A2327B03100DA1667 /* Splash Background.png */; };
+		D3DB99422327B03100DA1667 /* Pause Background.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992B2327B03100DA1667 /* Pause Background.png */; };
+		D3DB99432327B03100DA1667 /* Pause Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992C2327B03100DA1667 /* Pause Button.png */; };
+		D3DB99442327B03100DA1667 /* Sound On.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992D2327B03100DA1667 /* Sound On.png */; };
+		D3DB99452327B03100DA1667 /* Play Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992E2327B03100DA1667 /* Play Button.png */; };
+		D3DB99462327B03100DA1667 /* Resume Button.png in Resources */ = {isa = PBXBuildFile; fileRef = D3DB992F2327B03100DA1667 /* Resume Button.png */; };
+		D3DB99472327B03100DA1667 /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99312327B03100DA1667 /* arial.ttf */; };
+		D3DB99482327B03100DA1667 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3DB99322327B03100DA1667 /* Marker Felt.ttf */; };
+		D3DB994C2327B1DE00DA1667 /* SplashState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB994A2327B1DE00DA1667 /* SplashState.cpp */; };
+		D3DB994F2327CDFA00DA1667 /* MainMenuState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB994D2327CDFA00DA1667 /* MainMenuState.cpp */; };
+		D3DB99522327D87600DA1667 /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB99502327D87600DA1667 /* GameState.cpp */; };
+		D3DB99552327DB4E00DA1667 /* PauseState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D3DB99532327DB4E00DA1667 /* PauseState.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D36D407C232743AA00F9FDEE /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D36D4080232743AA00F9FDEE /* TicTacToe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TicTacToe-Info.plist"; sourceTree = "<group>"; };
+		D36D4084232743AA00F9FDEE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		D36D40A423277ACD00F9FDEE /* State.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = State.hpp; sourceTree = "<group>"; };
+		D36D40A623277BB600F9FDEE /* StateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StateMachine.cpp; sourceTree = "<group>"; };
+		D36D40A723277BB600F9FDEE /* StateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StateMachine.hpp; sourceTree = "<group>"; };
+		D37A12CF2327FA0E00C84EC2 /* GameOverState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameOverState.cpp; sourceTree = "<group>"; };
+		D37A12D02327FA0E00C84EC2 /* GameOverState.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameOverState.hpp; sourceTree = "<group>"; };
+		D37A12D2232809B600C84EC2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D37A12D62328C4BA00C84EC2 /* Draw Grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Draw Grid.png"; sourceTree = "<group>"; };
+		D39FAB702328F75C00ED4E2D /* AI.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AI.cpp; sourceTree = "<group>"; };
+		D39FAB712328F75C00ED4E2D /* AI.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AI.hpp; sourceTree = "<group>"; };
+		D3DB99112327828900DA1667 /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
+		D3DB99122327828900DA1667 /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
+		D3DB991423278E9B00DA1667 /* InputManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = InputManager.cpp; sourceTree = "<group>"; };
+		D3DB991523278E9B00DA1667 /* InputManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = InputManager.hpp; sourceTree = "<group>"; };
+		D3DB99172327916700DA1667 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		D3DB99182327916700DA1667 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		D3DB991C2327B03100DA1667 /* Home Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home Button.png"; sourceTree = "<group>"; };
+		D3DB991D2327B03100DA1667 /* Achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Achievements.png; sourceTree = "<group>"; };
+		D3DB991E2327B03100DA1667 /* O Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "O Win.png"; sourceTree = "<group>"; };
+		D3DB991F2327B03100DA1667 /* O.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = O.png; sourceTree = "<group>"; };
+		D3DB99202327B03100DA1667 /* X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = X.png; sourceTree = "<group>"; };
+		D3DB99212327B03100DA1667 /* X Win.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "X Win.png"; sourceTree = "<group>"; };
+		D3DB99222327B03100DA1667 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
+		D3DB99232327B03100DA1667 /* Play Button Outer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button Outer.png"; sourceTree = "<group>"; };
+		D3DB99242327B03100DA1667 /* Retry Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Retry Button.png"; sourceTree = "<group>"; };
+		D3DB99252327B03100DA1667 /* Main Menu Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Menu Background.png"; sourceTree = "<group>"; };
+		D3DB99262327B03100DA1667 /* Grid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grid.png; sourceTree = "<group>"; };
+		D3DB99272327B03100DA1667 /* Sound Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sound Off.png"; sourceTree = "<group>"; };
+		D3DB99282327B03100DA1667 /* Pause Window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause Window.png"; sourceTree = "<group>"; };
+		D3DB99292327B03100DA1667 /* Game Title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Game Title.png"; sourceTree = "<group>"; };
+		D3DB992A2327B03100DA1667 /* Splash Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Background.png"; sourceTree = "<group>"; };
+		D3DB992B2327B03100DA1667 /* Pause Background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause Background.png"; sourceTree = "<group>"; };
+		D3DB992C2327B03100DA1667 /* Pause Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause Button.png"; sourceTree = "<group>"; };
+		D3DB992D2327B03100DA1667 /* Sound On.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sound On.png"; sourceTree = "<group>"; };
+		D3DB992E2327B03100DA1667 /* Play Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Play Button.png"; sourceTree = "<group>"; };
+		D3DB992F2327B03100DA1667 /* Resume Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Resume Button.png"; sourceTree = "<group>"; };
+		D3DB99312327B03100DA1667 /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = arial.ttf; sourceTree = "<group>"; };
+		D3DB99322327B03100DA1667 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		D3DB99492327B0E500DA1667 /* DEFINITIONS.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DEFINITIONS.hpp; sourceTree = "<group>"; };
+		D3DB994A2327B1DE00DA1667 /* SplashState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SplashState.cpp; sourceTree = "<group>"; };
+		D3DB994B2327B1DE00DA1667 /* SplashState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SplashState.hpp; sourceTree = "<group>"; };
+		D3DB994D2327CDFA00DA1667 /* MainMenuState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MainMenuState.cpp; sourceTree = "<group>"; };
+		D3DB994E2327CDFA00DA1667 /* MainMenuState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MainMenuState.hpp; sourceTree = "<group>"; };
+		D3DB99502327D87600DA1667 /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
+		D3DB99512327D87600DA1667 /* GameState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameState.hpp; sourceTree = "<group>"; };
+		D3DB99532327DB4E00DA1667 /* PauseState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PauseState.cpp; sourceTree = "<group>"; };
+		D3DB99542327DB4E00DA1667 /* PauseState.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PauseState.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D36D4078232743AA00F9FDEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D36D4072232743AA00F9FDEE = {
+			isa = PBXGroup;
+			children = (
+				D36D407E232743AA00F9FDEE /* TicTacToe */,
+				D36D407D232743AA00F9FDEE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D36D407D232743AA00F9FDEE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D36D407C232743AA00F9FDEE /* TicTacToe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D36D407E232743AA00F9FDEE /* TicTacToe */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB991A2327B03100DA1667 /* Resources */,
+				D3DB9910232781DE00DA1667 /* Source */,
+				D37A12D2232809B600C84EC2 /* Images.xcassets */,
+				D36D407F232743AA00F9FDEE /* Supporting Files */,
+			);
+			path = TicTacToe;
+			sourceTree = "<group>";
+		};
+		D36D407F232743AA00F9FDEE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D36D4080232743AA00F9FDEE /* TicTacToe-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D3DB9910232781DE00DA1667 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D39FAB702328F75C00ED4E2D /* AI.cpp */,
+				D39FAB712328F75C00ED4E2D /* AI.hpp */,
+				D3DB99112327828900DA1667 /* AssetManager.cpp */,
+				D3DB99122327828900DA1667 /* AssetManager.hpp */,
+				D3DB99492327B0E500DA1667 /* DEFINITIONS.hpp */,
+				D3DB99172327916700DA1667 /* Game.cpp */,
+				D3DB99182327916700DA1667 /* Game.hpp */,
+				D37A12CF2327FA0E00C84EC2 /* GameOverState.cpp */,
+				D37A12D02327FA0E00C84EC2 /* GameOverState.hpp */,
+				D3DB99502327D87600DA1667 /* GameState.cpp */,
+				D3DB99512327D87600DA1667 /* GameState.hpp */,
+				D3DB991423278E9B00DA1667 /* InputManager.cpp */,
+				D3DB991523278E9B00DA1667 /* InputManager.hpp */,
+				D36D4084232743AA00F9FDEE /* main.cpp */,
+				D3DB994D2327CDFA00DA1667 /* MainMenuState.cpp */,
+				D3DB994E2327CDFA00DA1667 /* MainMenuState.hpp */,
+				D3DB99532327DB4E00DA1667 /* PauseState.cpp */,
+				D3DB99542327DB4E00DA1667 /* PauseState.hpp */,
+				D3DB994A2327B1DE00DA1667 /* SplashState.cpp */,
+				D3DB994B2327B1DE00DA1667 /* SplashState.hpp */,
+				D36D40A423277ACD00F9FDEE /* State.hpp */,
+				D36D40A623277BB600F9FDEE /* StateMachine.cpp */,
+				D36D40A723277BB600F9FDEE /* StateMachine.hpp */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D3DB991A2327B03100DA1667 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB991B2327B03100DA1667 /* res */,
+				D3DB99302327B03100DA1667 /* fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3DB991B2327B03100DA1667 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				D37A12D62328C4BA00C84EC2 /* Draw Grid.png */,
+				D3DB991C2327B03100DA1667 /* Home Button.png */,
+				D3DB991D2327B03100DA1667 /* Achievements.png */,
+				D3DB991E2327B03100DA1667 /* O Win.png */,
+				D3DB991F2327B03100DA1667 /* O.png */,
+				D3DB99202327B03100DA1667 /* X.png */,
+				D3DB99212327B03100DA1667 /* X Win.png */,
+				D3DB99222327B03100DA1667 /* .gitkeep */,
+				D3DB99232327B03100DA1667 /* Play Button Outer.png */,
+				D3DB99242327B03100DA1667 /* Retry Button.png */,
+				D3DB99252327B03100DA1667 /* Main Menu Background.png */,
+				D3DB99262327B03100DA1667 /* Grid.png */,
+				D3DB99272327B03100DA1667 /* Sound Off.png */,
+				D3DB99282327B03100DA1667 /* Pause Window.png */,
+				D3DB99292327B03100DA1667 /* Game Title.png */,
+				D3DB992A2327B03100DA1667 /* Splash Background.png */,
+				D3DB992B2327B03100DA1667 /* Pause Background.png */,
+				D3DB992C2327B03100DA1667 /* Pause Button.png */,
+				D3DB992D2327B03100DA1667 /* Sound On.png */,
+				D3DB992E2327B03100DA1667 /* Play Button.png */,
+				D3DB992F2327B03100DA1667 /* Resume Button.png */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		D3DB99302327B03100DA1667 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D3DB99312327B03100DA1667 /* arial.ttf */,
+				D3DB99322327B03100DA1667 /* Marker Felt.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D36D407B232743AA00F9FDEE /* TicTacToe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D36D4091232743AA00F9FDEE /* Build configuration list for PBXNativeTarget "TicTacToe" */;
+			buildPhases = (
+				D36D4077232743AA00F9FDEE /* Sources */,
+				D36D4078232743AA00F9FDEE /* Frameworks */,
+				D36D4079232743AA00F9FDEE /* Resources */,
+				D36D407A232743AA00F9FDEE /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TicTacToe;
+			productName = TicTacToe;
+			productReference = D36D407C232743AA00F9FDEE /* TicTacToe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D36D4073232743AA00F9FDEE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1030;
+				ORGANIZATIONNAME = "Varun Irani";
+				TargetAttributes = {
+					D36D407B232743AA00F9FDEE = {
+						CreatedOnToolsVersion = 10.3;
+					};
+				};
+			};
+			buildConfigurationList = D36D4076232743AA00F9FDEE /* Build configuration list for PBXProject "TicTacToe" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D36D4072232743AA00F9FDEE;
+			productRefGroup = D36D407D232743AA00F9FDEE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D36D407B232743AA00F9FDEE /* TicTacToe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D36D4079232743AA00F9FDEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DB99382327B03100DA1667 /* X Win.png in Resources */,
+				D37A12D3232809B600C84EC2 /* Images.xcassets in Resources */,
+				D3DB993A2327B03100DA1667 /* Play Button Outer.png in Resources */,
+				D3DB99332327B03100DA1667 /* Home Button.png in Resources */,
+				D3DB99372327B03100DA1667 /* X.png in Resources */,
+				D3DB99432327B03100DA1667 /* Pause Button.png in Resources */,
+				D3DB993D2327B03100DA1667 /* Grid.png in Resources */,
+				D3DB99422327B03100DA1667 /* Pause Background.png in Resources */,
+				D3DB99442327B03100DA1667 /* Sound On.png in Resources */,
+				D3DB99352327B03100DA1667 /* O Win.png in Resources */,
+				D3DB99462327B03100DA1667 /* Resume Button.png in Resources */,
+				D3DB99482327B03100DA1667 /* Marker Felt.ttf in Resources */,
+				D3DB99452327B03100DA1667 /* Play Button.png in Resources */,
+				D3DB99342327B03100DA1667 /* Achievements.png in Resources */,
+				D3DB993B2327B03100DA1667 /* Retry Button.png in Resources */,
+				D3DB99472327B03100DA1667 /* arial.ttf in Resources */,
+				D3DB993E2327B03100DA1667 /* Sound Off.png in Resources */,
+				D3DB99412327B03100DA1667 /* Splash Background.png in Resources */,
+				D3DB99402327B03100DA1667 /* Game Title.png in Resources */,
+				D3DB993F2327B03100DA1667 /* Pause Window.png in Resources */,
+				D3DB993C2327B03100DA1667 /* Main Menu Background.png in Resources */,
+				D37A12D72328C4BA00C84EC2 /* Draw Grid.png in Resources */,
+				D3DB99362327B03100DA1667 /* O.png in Resources */,
+				D3DB99392327B03100DA1667 /* .gitkeep in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D36D407A232743AA00F9FDEE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required SFML dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# SETTINGS\nSFML_DEPENDENCIES_INSTALL_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_FRAMEWORK_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks\"\nCMAKE_INSTALL_LIB_PREFIX=\"/Users/SFML/Desktop/packaging/tmp/install/Library/Frameworks/lib\"\nFRAMEWORKS_FULL_PATH=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n# Are we building a project that uses frameworks or dylibs?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert: not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $@ is some paths\n{\n    test $# -ge 1\n    assert $? \"force_remove() requires at least one parameter\"\n    rm -fr $@\n    assert $? \"couldn't remove $@\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$FRAMEWORKS_FOLDER_PATH/\"\n\n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1\"*\n        force_remove \"$dest/sfml-$1.framework\"\n\n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            source=\"$CMAKE_INSTALL_FRAMEWORK_PREFIX/sfml-$1.framework\"\n            target=\"sfml-$1.framework\"\n        elif [ \"$SFML_LINK_DYLIBS_SUFFIX\" = \"-d\" ]\n        then\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1-d.dylib\"\n            target=\"`readlink $source`\"\n        else\n            source=\"$CMAKE_INSTALL_LIB_PREFIX/libsfml-$1.dylib\"\n            target=\"`readlink $source`\"\n        fi\n\n        copy \"$source\" \"$dest/$target\"\n\n        # copy extra dependencies\n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\" frameworks too\n            for f in \"FLAC\" \"ogg\" \"vorbis\" \"vorbisenc\" \"vorbisfile\" \"OpenAL\"\n            do\n                copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/$f.framework\" \"$dest/$f.framework\"\n            done\n        elif [ \"$1\" = \"graphics\" ]\n        then\n            copy \"$SFML_DEPENDENCIES_INSTALL_PREFIX/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D36D4077232743AA00F9FDEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D3DB994F2327CDFA00DA1667 /* MainMenuState.cpp in Sources */,
+				D3DB99552327DB4E00DA1667 /* PauseState.cpp in Sources */,
+				D3DB99522327D87600DA1667 /* GameState.cpp in Sources */,
+				D3DB991623278E9B00DA1667 /* InputManager.cpp in Sources */,
+				D39FAB722328F75C00ED4E2D /* AI.cpp in Sources */,
+				D3DB99132327828900DA1667 /* AssetManager.cpp in Sources */,
+				D3DB994C2327B1DE00DA1667 /* SplashState.cpp in Sources */,
+				D36D4085232743AA00F9FDEE /* main.cpp in Sources */,
+				D36D40A823277BB600F9FDEE /* StateMachine.cpp in Sources */,
+				D3DB99192327916700DA1667 /* Game.cpp in Sources */,
+				D37A12D12327FA0E00C84EC2 /* GameOverState.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D36D408F232743AA00F9FDEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		D36D4090232743AA00F9FDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		D36D4092232743AA00F9FDEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D36D4093232743AA00F9FDEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "TicTacToe/TicTacToe-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D36D4076232743AA00F9FDEE /* Build configuration list for PBXProject "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D36D408F232743AA00F9FDEE /* Debug */,
+				D36D4090232743AA00F9FDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D36D4091232743AA00F9FDEE /* Build configuration list for PBXNativeTarget "TicTacToe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D36D4092232743AA00F9FDEE /* Debug */,
+				D36D4093232743AA00F9FDEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D36D4073232743AA00F9FDEE /* Project object */;
+}
