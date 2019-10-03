@@ -44,3 +44,33 @@ const int STATE_PLACING_PIECE = 94;
 const int STATE_AI_PLAYING = 93;
 const int STATE_DRAW = 92;
 
+typedef struct Move {
+	int x;
+	int y;
+	int score;
+	Move() {}
+	Move(int s) : score(s) {}
+} Move;
+
+class Board {
+private:
+	int _board[3][3];
+public:
+	void Clear() {
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				_board[i][j] = EMPTY_PIECE;
+			}
+		}
+	}
+	
+	void PlacePiece(int x, int y, int player) {
+		_board[x][y] = player;
+	}
+	
+	int At(int x, int y) {
+		return _board[x][y];
+	}
+};

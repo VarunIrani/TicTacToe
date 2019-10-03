@@ -34,7 +34,7 @@ namespace TTT {
 		
 		for (int i = 0; i < 3; i++)
 			for (int j = 0; j < 3; j++)
-				_grid[i][j] = EMPTY_PIECE;
+				_board.PlacePiece(j, i, EMPTY_PIECE);
 	}
 	
 	void GameState::HandleInput() {
@@ -48,16 +48,13 @@ namespace TTT {
 			} else if (this->_data->input.IsSpriteClicked(this->_gridSprite, Mouse::Left, this->_data->window)){
 				if (STATE_PLAYING == _gameState) {
 					this->CheckAndPlacePiece();
+//					this->CheckAndPlacePiece();
 				}
 			}
 		}
 	}
 	
-	void GameState::Update(float dt) {
-//		if (STATE_PLAYING == _gameState && _turn == AI_PIECE) {
-//			this->PlaceAIPiece();
-//		}
-	}
+	void GameState::Update(float dt) {}
 	
 	void GameState::Draw(float dt) {
 		this->_data->window.clear();
@@ -89,7 +86,7 @@ namespace TTT {
 		Vector2f gapOutsideOfGrid = Vector2f((SCREEN_WIDTH - gridSize.width) / 2, (SCREEN_HEIGHT - gridSize.height) / 2);
 		Vector2f gridLocalTouchPos = Vector2f(touchPoint.x - gapOutsideOfGrid.x, touchPoint.y - gapOutsideOfGrid.y);
 		Vector2f gridSectionSize = Vector2f(gridSize.width / 3, gridSize.height / 3);
-		int column, row;
+		int column = -1, row = -1;
 		if (gridLocalTouchPos.x < gridSectionSize.x) {
 			column = 1;
 		} else if (gridLocalTouchPos.x < gridSectionSize.x * 2) {
@@ -105,8 +102,13 @@ namespace TTT {
 			row = 3;
 		}
 		
-		if (_grid[column - 1][row - 1] == EMPTY_PIECE) {
-			_grid[column - 1][row - 1] = _turn;
+//		if (AI_PIECE == _turn) {
+//			this->PlaceAIPiece();
+//			return;
+//		}
+		
+		if (_board.At(column - 1, row - 1) == EMPTY_PIECE) {
+			_board.PlacePiece(column - 1, row - 1, _turn);
 			if (PLAYER_PIECE == _turn) {
 				_gridPieces[column - 1][row - 1].setTexture(this->_data->assets.GetTexture("X Piece Sprite"));
 				this->CheckPlayerHasWon(_turn);
@@ -117,18 +119,49 @@ namespace TTT {
 				_turn = PLAYER_PIECE;
 			}
 			_gridPieces[column - 1][row - 1].setColor(Color::White);
+			PrintBoard(_board);
 		}
 	}
 	
+	void GameState::PrintBoard(Board _board) {
+		for (int i = 0; i < 3; i++)
+		{
+			for (int j = 0; j < 3; j++)
+			{
+				switch (_board.At(j, i))
+				{
+					case X_PIECE:
+						cout << "X";
+						break;
+					case O_PIECE:
+						cout << "O";
+						break;
+					case EMPTY_PIECE:
+						cout << " ";
+						break;
+				}
+				if (j < 2)
+					cout << "|";
+			}
+			if (i < 2)
+				cout << "\n-+-+-\n";
+		}
+		cout << endl;
+	}
+	
 	void GameState::PlaceAIPiece() {
-		pair<int, int> bestMove = _ai.findBestMove(_grid);
-		int column = bestMove.first;
-		int row = bestMove.second;
+		Move bestMove = _ai.FindBestMove(_board, AI_PIECE);
+		int column = bestMove.y;
+		int row = bestMove.x;
 		cout << column << ", " << row << endl;
-		_gridPieces[column][row].setTexture(this->_data->assets.GetTexture("X Piece Sprite"));
-		this->CheckPlayerHasWon(_turn);
-		_turn = PLAYER_PIECE;
+		if (_board.At(column, row) == EMPTY_PIECE) {
+			_board.PlacePiece(column, row, _turn);
+			_gridPieces[column][row].setTexture(this->_data->assets.GetTexture("O Piece Sprite"));
+			this->CheckPlayerHasWon(_turn);
+			_turn = PLAYER_PIECE;
+		}
 		_gridPieces[column][row].setColor(Color::White);
+		PrintBoard(_board);
 	}
 	
 	void GameState::CheckPlayerHasWon(int player) {
@@ -148,13 +181,11 @@ namespace TTT {
 		
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
-				if (EMPTY_PIECE != _grid[i][j]) {
+				if (EMPTY_PIECE != _board.At(i, j)) {
 					_emptyNum--;
 				}
 			}
 		}
-		
-		cout << _emptyNum << endl;
 		
 		if (_emptyNum == 0 && _gameState != STATE_WON && _gameState != STATE_LOSE) {
 			_gameState = STATE_DRAW;
@@ -166,7 +197,7 @@ namespace TTT {
 	}
 	
 	void GameState::Check3PiecesForMatch(int x1, int y1, int x2, int y2, int x3, int y3, int pieceToCheck) {
-		if (_grid[x1][y1] + _grid[x2][y2] + _grid[x3][y3] == pieceToCheck * 3) {
+		if (_board.At(x1, y1) + _board.At(x2, y2) + _board.At(x3, y3) == pieceToCheck * 3) {
 			string winningPieceStr;
 			if (O_PIECE == pieceToCheck) {
 				winningPieceStr = "O Win Sprite";

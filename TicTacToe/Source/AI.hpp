@@ -2,16 +2,16 @@
 #include <algorithm>
 #include "DEFINITIONS.hpp"
 #include <array>
+#include <vector>
 using namespace std;
 
 namespace TTT {
 	class AI {
 	public:
 		AI();
-		pair<int, int> findBestMove(int b[3][3]);
+		Move FindBestMove(Board board, int player);
 	private:
-		int minimax(int b[3][3], int depth, bool isMax);
-		bool isWin(int player, int b[3][3]);
-		int movesLeft(int b[3][3]);
+		int Evaluate(Board b);
+		bool MovesLeft(Board b);
 	};
 }
