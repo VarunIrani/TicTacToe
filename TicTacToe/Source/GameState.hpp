@@ -26,6 +26,7 @@ namespace TTT {
 		Sprite _pauseButton;
 		Sprite _gridSprite;
 		Sprite _gridPieces[3][3];
+		Text _winText;
 		Board _board;
 		int _turn;
 		int _gameState;

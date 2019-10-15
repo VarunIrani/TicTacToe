@@ -29,6 +29,8 @@ const string O_PIECE_PATH = "Resources/res/O.png";
 const string X_WIN_PATH = "Resources/res/X Win.png";
 const string O_WIN_PATH = "Resources/res/O Win.png";
 
+const string FONT = "Resources/res/RobotoSlab-Bold.ttf";
+
 const int X_PIECE = 1;
 const int O_PIECE = -1;
 const int EMPTY_PIECE = 0;

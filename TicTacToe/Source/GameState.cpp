@@ -22,7 +22,13 @@ namespace TTT {
 		this->_data->assets.LoadTexture("O Piece Sprite", O_PIECE_PATH);
 		this->_data->assets.LoadTexture("X Win Sprite", X_WIN_PATH);
 		this->_data->assets.LoadTexture("O Win Sprite", O_WIN_PATH);
+		this->_data->assets.LoadFont("Win Font", FONT);
 		
+		_winText.setFont(this->_data->assets.GetFont("Win Font"));
+		_winText.setFillColor(Color::Black);
+		
+		_winText.setCharacterSize(120);
+		_winText.move(SCREEN_WIDTH / 4, SCREEN_HEIGHT / 2 + 300);
 		_gridSprite.setTexture(this->_data->assets.GetTexture("Grid Sprite"));
 		
 		this->_data->assets.LoadTexture("Pause Button", PAUSE_BUTTON);
@@ -66,6 +72,7 @@ namespace TTT {
 				this->_data->window.draw(this->_gridPieces[i][j]);
 			}
 		}
+		this->_data->window.draw(_winText);
 		this->_data->window.display();
 	}
 	
@@ -190,6 +197,7 @@ namespace TTT {
 		if (_emptyNum == 0 && _gameState != STATE_WON && _gameState != STATE_LOSE) {
 			_gameState = STATE_DRAW;
 			_gridSprite.setTexture(this->_data->assets.GetTexture("Draw Grid Sprite"));
+			_winText.setString("DRAW");
 		}
 		if (STATE_DRAW == _gameState || STATE_LOSE == _gameState || STATE_WON == _gameState) {
 //			Show Game Over
@@ -208,10 +216,17 @@ namespace TTT {
 			_gridPieces[x2][y2].setTexture(this->_data->assets.GetTexture(winningPieceStr));
 			_gridPieces[x3][y3].setTexture(this->_data->assets.GetTexture(winningPieceStr));
 			
-			if (PLAYER_PIECE == pieceToCheck) {
+			string winner = "";
+			if (X_PIECE == pieceToCheck)
+			{
+				winner = "X WON";
 				_gameState = STATE_WON;
-			} else {
+				_winText.setString(winner);
+			}
+			if (O_PIECE == pieceToCheck) {
+				winner = "O WON";
 				_gameState = STATE_LOSE;
+				_winText.setString(winner);
 			}
 		}
 	}
